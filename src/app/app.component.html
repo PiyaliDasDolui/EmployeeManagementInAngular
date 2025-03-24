@@ -9,16 +9,17 @@
     @for(weatherforecast of weatherForecasts; track $index){
       <div>
         <div>
-          Date: {{weatherforecast.date}}
+          Date: {{weatherforecast.firstName}}
         </div>
         <div>
-          Date: {{weatherforecast.temperatureC}}
+          Date: {{weatherforecast.lastName}}
         </div>
       </div>
 
     }
   </div>
 </main>
+<app-employee-dash-board></app-employee-dash-board>
 
 
 <router-outlet />
