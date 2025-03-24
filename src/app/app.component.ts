@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { WeatherForecastService } from './weather-forecast.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'EmployeeManagementUI';
+  weatherForecasts: any[] = [];
+
+  weatherForecastService = inject(WeatherForecastService);
+
+  constructor(){
+    this.weatherForecastService.get().subscribe(weather =>{
+      this.weatherForecasts = weather;
+    })
+  }
+
 }
