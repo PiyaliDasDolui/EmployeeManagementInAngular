@@ -15,7 +15,7 @@ export class EmployeeService {
     this._httpClient = httpClient;
   }
    public get(): Observable<any>{
-      debugger;
+       
       console.log('Inside employee service');
       return this._httpClient.get(this.apiUrl);
     }

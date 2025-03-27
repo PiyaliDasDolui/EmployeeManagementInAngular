@@ -19,7 +19,7 @@ export class AppComponent {
   _employeeService: EmployeeService;
   constructor(private employeeService: EmployeeService){
     this._employeeService = employeeService;
-    debugger;
+     
     console.log('Inside app component constructor');
 
     this._employeeService.get().subscribe(weather =>{
