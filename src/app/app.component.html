@@ -1,15 +1,13 @@
 
-
-<main class="main">
-  <div class="content">
-    <h2>
-      Testing the communication between Angular and API
-    </h2>
-
-  
+<header class="app-header">
+  <div class="header-left"  [routerLink]="['/']">
+    <h1>Employee Management</h1>
   </div>
+  <div class="header-right">
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
 </main>
-<app-employee-dash-board></app-employee-dash-board>
-
-
-<router-outlet />

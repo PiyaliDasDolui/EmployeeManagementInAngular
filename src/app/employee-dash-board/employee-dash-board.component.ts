@@ -5,13 +5,14 @@ import { ClientSideRowModelModule, ColDef } from 'ag-grid-community';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-employee-dash-board',
   standalone: true,
-  imports: [AgGridModule, CommonModule],
+  imports: [AgGridModule, CommonModule, RouterModule],
   templateUrl: './employee-dash-board.component.html',
   styleUrl: './employee-dash-board.component.css'
 })
